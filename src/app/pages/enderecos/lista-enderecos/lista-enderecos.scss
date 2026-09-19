@@ -1,0 +1,72 @@
+.address-list {
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        td:last-child {
+            text-align: center;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+    }
+
+}
+
+@media (max-width: 425px) {
+    .address-list {
+        &__table {
+            display: block;
+
+            thead,
+            tbody {
+                display: block;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tr {
+                display: block;
+                border: 1px solid #ccc;
+                border-radius: 0.5rem;
+                margin-bottom: 0.75rem;
+                overflow: hidden;
+            }
+
+            td {
+                border: 0;
+                border-bottom: 1px solid #e5e5e5;
+                display: grid;
+                gap: 0.75rem;
+                grid-template-columns: 6.5rem minmax(0, 1fr);
+                overflow-wrap: anywhere;
+            }
+
+            td::before {
+                color: #132745;
+                content: attr(data-label);
+                font-weight: 700;
+            }
+
+            td:last-child {
+                border-bottom: 0;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            td:last-child::before {
+                display: none;
+            }
+        }
+    }
+}

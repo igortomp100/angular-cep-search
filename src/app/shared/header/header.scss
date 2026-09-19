@@ -1,0 +1,121 @@
+@use 'styles/_tokens' as tokens;
+@use 'styles/_buttons' as buttons;
+
+$breakpoint-mobile: 425px;
+
+.site-header {
+    &__section {
+        background: linear-gradient(165deg, #132745, #2c7499);
+        box-shadow: 0 10px 20px rgba(3, 94, 231, 0.3);
+        display: flex;
+        min-height: 10rem;
+        align-items: center;
+
+        @media (max-width: $breakpoint-mobile) {
+            min-height: 8rem;
+        }
+    }
+
+    &__header {
+        width: 100%;
+    }
+
+    &__nav {
+        align-items: center;
+        display: flex;
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__brand {
+        padding: 0 1rem;
+        margin-right: 0;
+
+        img {
+            display: block;
+            filter: brightness(0) invert(1);
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            scale: 0.8;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: auto;
+
+        background-color: tokens.$color-menu;
+        height: 4rem;
+        padding: 0 1rem;
+        width: 75%;
+        box-shadow: -2px 3px 9px rgb(22 110 150);
+
+        a {
+            color: tokens.$color-menu-text;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            height: 2.5rem;
+            justify-content: center;
+            width: 100%;
+
+        }
+    }
+
+    &__menu-item {
+        position: relative;
+    }
+
+    &__submenu {
+        left: 0;
+        opacity: 0;
+        padding-top: 0.5rem;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        visibility: hidden;
+        z-index: 1;
+    }
+
+    &__submenu-link {
+        background-color: tokens.$color-background-submenu;
+        font-weight: 500;
+        padding: 0.5rem;
+        white-space: nowrap;
+        display: block;
+        border-radius: 0 0.5rem;
+        box-shadow: 0 2px 4px #00000033;
+    }
+
+
+    @media (hover: hover) and (pointer: fine) {
+        &__menu-item:hover>.button-base-menu {
+            background-color: tokens.$color-menu-hover;
+            transition: all 0.3s ease-out;
+        }
+
+        &__menu-item:hover &__submenu {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(3px);
+            transition: all 0.5s ease;
+            visibility: visible;
+        }
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        &__submenu--open {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(3px);
+            transition: all 0.5s ease;
+            visibility: visible;
+        }
+    }
+}

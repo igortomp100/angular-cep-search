@@ -1,0 +1,28 @@
+@if(buscas.length > 0) {
+<section aria-labelledby="search-list-title" class="address-list">
+    <h2 id="search-list-title">Buscas realizadas</h2>
+    <table aria-label="Lista de endereços pesquisados" class="address-list__table">
+        <thead>
+            <tr>
+                <th scope="col">CEP</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Data</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(busca of buscas; track $index; let indice = $index){
+            <tr>
+                <td data-label="CEP">{{ busca.cep }}</td>
+                <td data-label="Endereço">{{ busca.endereco }}</td>
+                <td data-label="Data">{{ busca.data }}</td>
+                <td data-label="Ações">
+                    <button class="button-form" matButton="filled" type="button"
+                        (click)="buscaExcluida.emit(indice)">Excluir</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</section>
+}

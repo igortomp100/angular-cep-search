@@ -1,0 +1,26 @@
+<section class="site-header__section">
+    <header class="content site-header__header">
+        <nav aria-label="Navegação Principal" class="site-header__nav">
+            <a aria-label="Ir para a página inicial" routerLink="/" class="site-header__brand">
+                <img alt="SCCON Geospatial" height="40" src="logo_sccon.svg" width="126" />
+            </a>
+
+            <div class="site-header__menu">
+                <a routerLink="/home" class="button-base-menu" (click)="submenuAberto = false">Home</a>
+
+                <div class="site-header__menu-item">
+                    <a routerLink="/enderecos" class="button-base-menu" (click)="submenuAberto = true">
+                        Endereços
+                    </a>
+
+                    <div class="site-header__submenu" [class.site-header__submenu--open]="submenuAberto">
+                        <a routerLink="/enderecos/buscar" class="site-header__submenu-link"
+                            (click)="submenuAberto = false">
+                            Buscar Endereços
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+</section>

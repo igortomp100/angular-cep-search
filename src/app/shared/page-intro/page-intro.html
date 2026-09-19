@@ -1,0 +1,12 @@
+<section aria-labelledby="pageIntro-title" class="pageIntro__section">
+    <div class="content pageIntro__content">
+        @if(subtitle){
+        <h3 class="pageIntro__subtitle">{{ subtitle }}</h3>
+        }
+        <h1 id="pageIntro-title" class="pageIntro__title">{{title}}</h1>
+        <p class="pageIntro__description">
+            {{description}}
+        </p>
+        <a class="pageIntro__action button" [routerLink]="actionLink">{{ actionText }}</a>
+    </div>
+</section>

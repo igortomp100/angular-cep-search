@@ -1,0 +1,29 @@
+@use 'styles/_buttons';
+
+.pageIntro {
+    &__section {
+        align-items: safe center;
+        display: flex;
+        flex: 1;
+        padding: 2rem;
+    }
+
+    &__content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 1.1;
+        margin: 0.75rem 0 1rem;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,12 @@
+@use 'sass:color';
+
+$color-menu: #132745;
+$color-menu-hover: #1f4b6d;
+$color-text: #132745;
+$color-error: #af635f;
+$color-button-text: #132745;
+$color-menu-text: #ffffff;
+$color-background-submenu: #2b7195;
+
+$color-button: #d7dbdd;
+$color-button-hover: color.adjust($color-button, $lightness: -6%);

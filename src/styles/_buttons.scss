@@ -1,0 +1,49 @@
+@use 'styles/_tokens' as tokens;
+
+.button-base-menu {
+    border-radius: 0.5rem 0;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.button-base-menu:hover {
+    background-color: tokens.$color-menu-hover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.button-form {
+    --mat-button-filled-container-color: #{tokens.$color-button};
+    --mat-button-filled-label-text-color: #{tokens.$color-button-text};
+    --mat-button-filled-container-shape: 0.5rem;
+    --mat-button-filled-hover-state-layer-opacity: 0;
+
+    transition: background-color 0.3s ease-out;
+
+    &:hover:not(:disabled) {
+        --mat-button-filled-container-color: #{tokens.$color-button-hover};
+    }
+}
+
+.button {
+    background: tokens.$color-button;
+    border-radius: 0.5rem;
+    color: tokens.$color-button-text;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    padding: 0.8rem 1.25rem;
+    text-decoration: none;
+    translate: 0 0;
+    transition: all 0.5s ease-out;
+
+}
+
+
+.button:hover {
+    background-color: tokens.$color-button-hover;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-out;
+    translate: 0 -2px;
+
+}

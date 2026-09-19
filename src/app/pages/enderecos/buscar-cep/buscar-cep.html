@@ -1,0 +1,10 @@
+<section aria-labelledby="buscar-cep-title" class="buscarCep__section">
+    <div class="buscar-cep__content content">
+        <header class="buscar-cep__heading">
+            <h1 id="buscar-cep-title">Busca de endereços</h1>
+            <span>Consulte um CEP válido e mantenha as pesquisas neste navegador.</span>
+        </header>
+        <app-buscar-cep-search [buscas]="buscas" (enderecoEncontrado)="receberEndereco($event)"></app-buscar-cep-search>
+        <app-lista-enderecos [buscas]="buscas" (buscaExcluida)="removerBusca($event)"></app-lista-enderecos>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="buscarCep__section">
+    <mat-card class="search-card">
+        <mat-card-content>
+            <form [formGroup]="cepForm" (ngSubmit)="search()" novalidate>
+
+                <mat-form-field appearance="outline" subscriptSizing="dynamic">
+                    <mat-label>Buscar por CEP</mat-label>
+                    <input formControlName="cep" inputmode="numeric" maxlength="9" matInput placeholder="00000-000"
+                        (input)="formatCep($any($event.target).value)" />
+                    <mat-error>{{ feedbackMessage }}</mat-error>
+                </mat-form-field>
+                <button class="button-form" matButton="filled" [disabled]="isLoading" type="submit">
+                    {{ isLoading ? 'Buscando...' : 'Buscar' }}
+                </button>
+            </form>
+            <p class="search-card__help" id="cep-help">A consulta ocorre no serviço público ViaCEP.</p>
+        </mat-card-content>
+    </mat-card>
+</section>
