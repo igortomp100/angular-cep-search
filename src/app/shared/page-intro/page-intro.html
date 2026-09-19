@@ -7,6 +7,8 @@
         <p class="pageIntro__description">
             {{description}}
         </p>
+        @if(actionText && actionLink){
         <a class="pageIntro__action button" [routerLink]="actionLink">{{ actionText }}</a>
+        }
     </div>
 </section>
