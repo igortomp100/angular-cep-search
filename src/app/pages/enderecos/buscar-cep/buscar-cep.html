@@ -5,6 +5,7 @@
             <span>Consulte um CEP válido e mantenha as pesquisas neste navegador.</span>
         </header>
         <app-buscar-cep-search [buscas]="buscas" (enderecoEncontrado)="receberEndereco($event)"></app-buscar-cep-search>
-        <app-lista-enderecos [buscas]="buscas" (buscaExcluida)="removerBusca($event)"></app-lista-enderecos>
+        <app-lista-enderecos [buscas]="buscas" (buscaExcluida)="removerBusca($event)"
+            (excluirTodosEvent)="excluirTodos()"></app-lista-enderecos>
     </div>
 </section>
