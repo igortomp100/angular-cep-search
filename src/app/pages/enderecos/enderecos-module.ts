@@ -13,6 +13,7 @@ import { BuscarCepSearchComponent } from './buscar-cep-search/buscar-cep-search'
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListaEnderecos } from './lista-enderecos/lista-enderecos';
 import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [EnderecosComponent, BuscarCepComponent, BuscarCepSearchComponent, ListaEnderecos],
@@ -26,6 +27,7 @@ import { MatTableModule } from '@angular/material/table';
     MatInputModule,
     ReactiveFormsModule,
     MatTableModule,
+    MatIconModule,
   ],
 })
 export class EnderecosModule { }

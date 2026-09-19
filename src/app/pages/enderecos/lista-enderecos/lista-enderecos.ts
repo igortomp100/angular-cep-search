@@ -10,4 +10,5 @@ import { Busca } from '@core/models/busca';
 export class ListaEnderecos {
   @Input() buscas: Busca[] = [];
   @Output() buscaExcluida = new EventEmitter<number>();
+  @Output() excluirTodosEvent = new EventEmitter<void>();
 }

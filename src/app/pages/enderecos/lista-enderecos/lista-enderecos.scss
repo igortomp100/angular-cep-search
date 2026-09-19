@@ -1,4 +1,23 @@
+@use 'sass:color';
+@use 'styles/_tokens' as tokens;
+
 .address-list {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .button-form mat-icon {
+            transition: transform 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .button-form:hover mat-icon {
+            transform: rotate(-10deg) scale(1.5);
+        }
+    }
+
     &__table {
         width: 100%;
         border-collapse: collapse;
@@ -19,6 +38,15 @@
         }
     }
 
+    &__delete-button {
+        border-radius: 50%;
+        color: tokens.$color-text;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: color.change(tokens.$color-text, $alpha: 0.06);
+        }
+    }
 }
 
 @media (max-width: 425px) {

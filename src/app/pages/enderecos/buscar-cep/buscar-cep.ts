@@ -39,5 +39,10 @@ export class BuscarCepComponent {
     this.historicoBuscas.salvarBuscas(this.buscas);
   }
 
+  excluirTodos(): void {
+    this.buscas = [];
+    this.historicoBuscas.salvarBuscas(this.buscas);
+  }
+
   constructor() { }
 }

@@ -1,13 +1,20 @@
 @if(buscas.length > 0) {
 <section aria-labelledby="search-list-title" class="address-list">
-    <h2 id="search-list-title">Buscas realizadas</h2>
+    <div class="address-list__header">
+        <h2 id="search-list-title">Buscas realizadas</h2>
+        <button (click)="excluirTodosEvent.emit()" class="button-form" matButton="filled" type="button"
+            aria-label="Excluir todas as buscas">
+            <mat-icon aria-hidden="true">delete</mat-icon>Excluir todos</button>
+    </div>
     <table aria-label="Lista de endereços pesquisados" class="address-list__table">
         <thead>
             <tr>
                 <th scope="col">CEP</th>
                 <th scope="col">Endereço</th>
                 <th scope="col">Data</th>
-                <th></th>
+                <th scope="col">
+
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +24,11 @@
                 <td data-label="Endereço">{{ busca.endereco }}</td>
                 <td data-label="Data">{{ busca.data }}</td>
                 <td data-label="Ações">
-                    <button class="button-form" matButton="filled" type="button"
-                        (click)="buscaExcluida.emit(indice)">Excluir</button>
+                    <button class="address-list__delete-button" matIconButton type="button"
+                        [attr.aria-label]="'Excluir busca do CEP ' + busca.cep"
+                        (click)="buscaExcluida.emit(indice)">
+                        <mat-icon aria-hidden="true">close</mat-icon>
+                    </button>
                 </td>
             </tr>
             }
