@@ -9,7 +9,7 @@
             <div class="site-header__menu">
                 <a routerLink="/home" class="button-base-menu" (click)="submenuAberto = false">Home</a>
 
-                <div class="site-header__menu-item">
+                <div class="site-header__menu-item" [class.site-header__menu-item--open]="submenuAberto">
                     <a routerLink="/enderecos" class="button-base-menu" (click)="submenuAberto = true">
                         Endereços
                     </a>

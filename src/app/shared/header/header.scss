@@ -110,6 +110,11 @@ $breakpoint-mobile: 425px;
     }
 
     @media (hover: none) and (pointer: coarse) {
+        &__menu-item--open > .button-base-menu {
+            background-color: tokens.$color-menu-hover;
+            transition: all 0.3s ease-out;
+        }
+
         &__submenu--open {
             opacity: 1;
             pointer-events: auto;
