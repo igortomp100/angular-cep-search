@@ -98,3 +98,14 @@
         }
     }
 }
+
+.address-list__address {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.25rem;
+}
+
+.address-list__address a {
+    align-items: center;
+    display: inline-flex;
+}
