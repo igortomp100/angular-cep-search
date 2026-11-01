@@ -1,10 +1,22 @@
 <section aria-labelledby="buscar-cep-title" class="buscarCep__section">
     <div class="buscar-cep__content content">
         <header class="buscar-cep__heading">
-            <h1 id="buscar-cep-title">Busca de endereços</h1>
-            <span>Consulte um CEP válido e mantenha as pesquisas neste navegador.</span>
+            <span class="buscar-cep__eyebrow">Consulta de CEP</span>
+            <h1 id="buscar-cep-title">Consulte um CEP</h1>
+            <p>Digite um CEP para encontrar o endereço completo.</p>
         </header>
         <app-buscar-cep-search [buscas]="buscas" (enderecoEncontrado)="receberEndereco($event)"></app-buscar-cep-search>
+        @if (ultimoEndereco; as endereco) {
+        <article class="buscar-cep__result" aria-live="polite">
+            <span class="material-icons buscar-cep__result-icon" aria-hidden="true">check</span>
+            <div>
+                <p class="buscar-cep__result-label">Endereço encontrado</p>
+                <h2>{{ endereco.cep }}</h2>
+                <p>{{ endereco.logradouro || 'Logradouro não informado' }}{{ endereco.bairro ? ', ' + endereco.bairro : '' }}</p>
+                <span>{{ endereco.localidade }} — {{ endereco.uf }}</span>
+            </div>
+        </article>
+        }
         <app-lista-enderecos [buscas]="buscas" (buscaExcluida)="removerBusca($event)"
             (excluirTodosEvent)="excluirTodos()"></app-lista-enderecos>
     </div>

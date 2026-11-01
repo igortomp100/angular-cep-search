@@ -1,3 +1,14 @@
-.buscar-cep__heading {
-    margin-bottom: 1rem;
-}
+@use 'styles/_tokens' as tokens;
+
+.buscarCep__section { background: linear-gradient(180deg, #f7fbff 0%, #fff 35rem); min-height: calc(100vh - 5.25rem); padding: clamp(3rem, 7vw, 5.5rem) 0; }
+.buscar-cep__content { max-width: 1080px; }
+.buscar-cep__heading { margin: 0 auto 2rem; max-width: 720px; text-align: center; }
+.buscar-cep__heading h1 { font-size: clamp(2.3rem, 5vw, 3.6rem); letter-spacing: -0.05em; line-height: 1.05; margin: 0.75rem 0; }
+.buscar-cep__heading p { color: #5e6e86; font-size: 1.1rem; margin: 0; }
+.buscar-cep__eyebrow { background: #e9f3ff; border-radius: 99px; color: tokens.$color-primary; display: inline-block; font-size: 0.9rem; font-weight: 700; padding: 0.45rem 0.85rem; }
+.buscar-cep__result { align-items: center; background: linear-gradient(110deg, #f0fff8, #fafffd); border: 1px solid #93e5c2; border-radius: 1rem; display: flex; gap: 1.25rem; margin: 2rem 0; padding: 1.4rem 1.5rem; }
+.buscar-cep__result-icon { align-items: center; background: #11a968; border-radius: 50%; color: #fff; display: flex; flex: 0 0 2.8rem; height: 2.8rem; justify-content: center; }
+.buscar-cep__result-label { color: #087648; font-size: 0.95rem; font-weight: 700; margin: 0 0 0.35rem; }
+.buscar-cep__result h2 { font-size: 1.35rem; margin: 0 0 0.25rem; }.buscar-cep__result p:not(.buscar-cep__result-label) { margin: 0; }.buscar-cep__result span:not(.buscar-cep__result-icon) { color: #5e6e86; }
+
+@media (max-width: 700px) { .buscarCep__section { min-height: calc(100vh - 7.5rem); padding: 3rem 0; }.buscar-cep__result { align-items: flex-start; text-align: left; } }

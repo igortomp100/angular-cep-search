@@ -1,0 +1,29 @@
+@use 'styles/_tokens' as tokens;
+
+.home-hero {
+    background: linear-gradient(135deg, #fff 0%, #f4f9ff 100%);
+    overflow: hidden;
+    padding: clamp(3.5rem, 8vw, 7rem) 0 4.5rem;
+
+    &__layout { align-items: center; display: grid; gap: clamp(3rem, 7vw, 7rem); grid-template-columns: minmax(0, 1.12fr) minmax(350px, 0.88fr); }
+    &__copy { max-width: 700px; }
+    &__eyebrow { align-items: center; background: #e9f3ff; border-radius: 99px; color: tokens.$color-primary; display: inline-flex; font-size: 0.95rem; font-weight: 700; gap: 0.4rem; padding: 0.55rem 0.9rem; }
+    h1 { color: tokens.$color-text; font-size: clamp(2.8rem, 5vw, 4.8rem); font-weight: 800; letter-spacing: -0.052em; line-height: 1.04; margin: 1.45rem 0 1.7rem; max-width: 720px; }
+    h1 span { display: block; white-space: nowrap; }
+    h1 strong { color: tokens.$color-primary; }
+    p { color: #52637c; font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.7; margin: 0; max-width: 620px; }
+    &__action { align-items: center; display: inline-flex; gap: 0.7rem; margin-top: 2.35rem; }
+    &__map-illustration { margin: 0 auto; max-width: 550px; width: 100%; }
+    &__map-illustration img { display: block; height: auto; width: 100%; }
+}
+
+.home-features { padding: 0 0 4.5rem; }
+.home-features__grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr); }
+.home-features__card { align-items: flex-start; background: #fff; border: 1px solid tokens.$color-border; border-radius: 1rem; box-shadow: 0 12px 28px rgb(16 67 130 / 7%); display: flex; gap: 1rem; padding: 1.4rem; }
+.home-features h2 { font-size: 1.1rem; margin: 0 0 0.35rem; }
+.home-features p { color: #66758b; font-size: 0.95rem; margin: 0; }
+.home-features__icon { align-items: center; border-radius: 50%; display: flex; flex: 0 0 3rem; height: 3rem; justify-content: center; min-width: 3rem; width: 3rem; }
+.home-features__icon--blue { background: #e5f1ff; color: #0866e9; }.home-features__icon--green { background: #e1f8f1; color: #00a982; }.home-features__icon--purple { background: #f0e8ff; color: #7b3fe4; }
+
+@media (max-width: 850px) { .home-hero__layout { grid-template-columns: 1fr; }.home-hero__map-illustration { max-width: 500px; }.home-features__grid { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .home-hero { padding: 3.25rem 0; text-align: center; }.home-hero__eyebrow { text-align: left; }.home-hero h1 { font-size: clamp(2.55rem, 12vw, 4rem); }.home-hero h1 span { white-space: normal; }.home-features { padding-bottom: 3rem; } }

@@ -1,17 +1,17 @@
 @if(buscas.length > 0) {
 <section aria-labelledby="search-list-title" class="address-list">
     <div class="address-list__header">
-        <h2 id="search-list-title">Buscas realizadas</h2>
-        <button (click)="excluirTodosEvent.emit()" class="button-form" matButton="filled" type="button"
+        <div class="address-list__title"><span class="material-icons" aria-hidden="true">history</span><h2 id="search-list-title">Histórico de buscas</h2></div>
+        <button (click)="excluirTodosEvent.emit()" class="address-list__clear-button" matButton="outlined" type="button"
             aria-label="Excluir todas as buscas">
-            <mat-icon aria-hidden="true">delete</mat-icon>Excluir todos</button>
+            <mat-icon aria-hidden="true">delete_outline</mat-icon>Limpar histórico</button>
     </div>
     <table aria-label="Lista de endereços pesquisados" class="address-list__table">
         <thead>
             <tr>
                 <th scope="col">CEP</th>
                 <th scope="col">Endereço</th>
-                <th scope="col">Data</th>
+                <th scope="col">Consultado em</th>
                 <th scope="col">
 
                 </th>

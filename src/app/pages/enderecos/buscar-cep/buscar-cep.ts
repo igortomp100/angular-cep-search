@@ -12,6 +12,7 @@ import { Busca } from '@core/models/busca';
 export class BuscarCepComponent {
 
   buscas: Busca[] = []
+  ultimoEndereco?: ViaCepAddress;
   private historicoBuscas = inject(HistoricoBuscas);
 
   ngOnInit(): void {
@@ -19,6 +20,8 @@ export class BuscarCepComponent {
   }
 
   receberEndereco(endereco: ViaCepAddress): void {
+
+    this.ultimoEndereco = endereco;
 
     const { cep, logradouro, bairro, localidade, uf } = endereco;
 
@@ -41,6 +44,7 @@ export class BuscarCepComponent {
 
   excluirTodos(): void {
     this.buscas = [];
+    this.ultimoEndereco = undefined;
     this.historicoBuscas.salvarBuscas(this.buscas);
   }
 

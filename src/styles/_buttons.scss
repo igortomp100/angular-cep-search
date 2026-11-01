@@ -1,9 +1,9 @@
 @use 'styles/_tokens' as tokens;
 
 .button-base-menu {
-    border-radius: 0.5rem 0;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
 }
 
 .button-base-menu:hover {
@@ -18,10 +18,13 @@
     --mat-button-filled-container-shape: 0.5rem;
     --mat-button-filled-hover-state-layer-opacity: 0;
 
-    transition: background-color 0.3s ease-out;
+    box-shadow: 0 10px 20px rgb(8 102 233 / 16%);
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 
     &:hover:not(:disabled) {
         --mat-button-filled-container-color: #{tokens.$color-button-hover};
+        transform: translateY(-1px);
     }
 }
 
@@ -31,19 +34,18 @@
     color: tokens.$color-button-text;
     cursor: pointer;
     display: inline-block;
-    font-weight: 500;
-    padding: 0.8rem 1.25rem;
+    box-shadow: 0 12px 22px rgb(8 102 233 / 22%);
+    font-weight: 700;
+    padding: 0.9rem 1.35rem;
     text-decoration: none;
-    translate: 0 0;
-    transition: all 0.5s ease-out;
+    transition: all 0.2s ease;
 
 }
 
 
 .button:hover {
     background-color: tokens.$color-button-hover;
-    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-out;
-    translate: 0 -2px;
+    box-shadow: 0 16px 28px rgb(8 102 233 / 28%);
+    transform: translateY(-2px);
 
 }

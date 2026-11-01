@@ -1,11 +1,15 @@
 @use 'sass:color';
 
-$color-menu: #132745;
-$color-menu-hover: #1f4b6d;
-$color-text: #132745;
-$color-error: #af635f;
-$color-button-text: #132745;
+$color-menu: #082a59;
+$color-menu-hover: #0b3d78;
+$color-text: #09254b;
+$color-error: #b42318;
+$color-button-text: #ffffff;
 $color-menu-text: #ffffff;
 
-$color-button: #d7dbdd;
-$color-button-hover: color.adjust($color-button, $lightness: -6%);
+$color-primary: #0866e9;
+$color-primary-hover: #0755c3;
+$color-border: #dce7f5;
+$color-surface-muted: #f4f8ff;
+$color-button: $color-primary;
+$color-button-hover: $color-primary-hover;

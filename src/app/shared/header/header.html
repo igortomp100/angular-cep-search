@@ -6,8 +6,8 @@
             </a>
 
             <div class="site-header__menu">
-                <a routerLink="/" class="button-base-menu">Home</a>
-                <a routerLink="/enderecos" class="button-base-menu">Endereços</a>
+                <a routerLink="/" routerLinkActive="site-header__menu-link--active" [routerLinkActiveOptions]="{ exact: true }" class="button-base-menu">Início</a>
+                <a routerLink="/enderecos" routerLinkActive="site-header__menu-link--active" class="button-base-menu">Consultar CEP</a>
             </div>
         </nav>
     </header>

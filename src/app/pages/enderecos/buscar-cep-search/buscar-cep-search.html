@@ -4,16 +4,17 @@
             <form [formGroup]="cepForm" (ngSubmit)="search()" novalidate>
 
                 <mat-form-field appearance="outline" subscriptSizing="dynamic">
-                    <mat-label>Buscar por CEP</mat-label>
+                    <mat-label>Digite o CEP</mat-label>
+                    <mat-icon matPrefix aria-hidden="true">search</mat-icon>
                     <input formControlName="cep" inputmode="numeric" maxlength="9" matInput placeholder="00000-000"
                         (input)="formatCep($any($event.target).value)" />
                     <mat-error>{{ feedbackMessage }}</mat-error>
                 </mat-form-field>
                 <button class="button-form" matButton="filled" [disabled]="isLoading" type="submit">
-                    {{ isLoading ? 'Buscando...' : 'Buscar' }}
+                    {{ isLoading ? 'Buscando...' : 'Consultar' }}
                 </button>
             </form>
-            <p class="search-card__help" id="cep-help">A consulta ocorre no serviço público ViaCEP.</p>
+            <p class="search-card__help" id="cep-help">Dados consultados no serviço público ViaCEP.</p>
         </mat-card-content>
     </mat-card>
 </section>
