@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './header.scss',
   templateUrl: './header.html',
 })
-export class HeaderComponent {
-  submenuAberto = false;
-}
+export class HeaderComponent { }

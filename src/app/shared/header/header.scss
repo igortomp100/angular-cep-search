@@ -35,7 +35,6 @@ $breakpoint-mobile: 425px;
 
         img {
             display: block;
-            filter: brightness(0) invert(1);
         }
 
         @media (max-width: $breakpoint-mobile) {
@@ -65,62 +64,6 @@ $breakpoint-mobile: 425px;
             justify-content: center;
             width: 100%;
 
-        }
-    }
-
-    &__menu-item {
-        position: relative;
-    }
-
-    &__submenu {
-        left: 0;
-        opacity: 0;
-        padding-top: 0.5rem;
-        pointer-events: none;
-        position: absolute;
-        top: 100%;
-        visibility: hidden;
-        z-index: 1;
-    }
-
-    &__submenu-link {
-        background-color: tokens.$color-background-submenu;
-        font-weight: 500;
-        padding: 0.5rem;
-        white-space: nowrap;
-        display: block;
-        border-radius: 0 0.5rem;
-        box-shadow: 0 2px 4px #00000033;
-    }
-
-
-    @media (hover: hover) and (pointer: fine) {
-        &__menu-item:hover>.button-base-menu {
-            background-color: tokens.$color-menu-hover;
-            transition: all 0.3s ease-out;
-        }
-
-        &__menu-item:hover &__submenu {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(3px);
-            transition: all 0.5s ease;
-            visibility: visible;
-        }
-    }
-
-    @media (hover: none) and (pointer: coarse) {
-        &__menu-item--open > .button-base-menu {
-            background-color: tokens.$color-menu-hover;
-            transition: all 0.3s ease-out;
-        }
-
-        &__submenu--open {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(3px);
-            transition: all 0.5s ease;
-            visibility: visible;
         }
     }
 }

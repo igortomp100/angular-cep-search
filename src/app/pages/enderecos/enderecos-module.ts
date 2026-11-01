@@ -6,7 +6,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { EnderecosRoutingModule } from './enderecos-routing-module';
-import { EnderecosComponent } from './enderecos';
 import { SharedModule } from '../../shared/shared-module';
 import { BuscarCepComponent } from './buscar-cep/buscar-cep';
 import { BuscarCepSearchComponent } from './buscar-cep-search/buscar-cep-search';
@@ -16,7 +15,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [EnderecosComponent, BuscarCepComponent, BuscarCepSearchComponent, ListaEnderecos],
+  declarations: [BuscarCepComponent, BuscarCepSearchComponent, ListaEnderecos],
   imports: [
     CommonModule,
     EnderecosRoutingModule,

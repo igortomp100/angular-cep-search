@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EnderecosComponent } from './enderecos';
 import { BuscarCepComponent } from './buscar-cep/buscar-cep';
 
 const routes: Routes = [
   {
     path: '',
-    component: EnderecosComponent
+    component: BuscarCepComponent
   },
   {
     path: 'buscar',
-    component: BuscarCepComponent
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

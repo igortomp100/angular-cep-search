@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="220" height="50" role="img" aria-labelledby="title">
+  <title id="title">Buscar Cep</title>
+  <g fill="none" stroke="#78d9f5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 21c0 12-17 25-17 25S6 33 6 21a17 17 0 0 1 34 0Z"/>
+    <circle cx="23" cy="20" r="6"/>
+    <path d="m27.5 24.5 8 8" stroke="#fff"/>
+  </g>
+  <text x="54" y="33" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="-.8"><tspan font-weight="700">Buscar</tspan><tspan font-weight="400"> Cep</tspan></text>
+</svg>
