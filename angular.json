@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "sccon-test": {
+    "consulta-cep": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -37,6 +37,11 @@
               }
             ],
             "styles": [
+              "node_modules/@fontsource/inter/latin-400.css",
+              "node_modules/@fontsource/inter/latin-500.css",
+              "node_modules/@fontsource/inter/latin-600.css",
+              "node_modules/@fontsource/inter/latin-700.css",
+              "node_modules/@fontsource/inter/latin-800.css",
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
@@ -59,7 +64,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
@@ -73,10 +79,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "sccon-test:build:production"
+              "buildTarget": "consulta-cep:build:production"
             },
             "development": {
-              "buildTarget": "sccon-test:build:development"
+              "buildTarget": "consulta-cep:build:development"
             }
           },
           "defaultConfiguration": "development"

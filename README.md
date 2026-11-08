@@ -48,11 +48,11 @@ Para gerar os arquivos de produção:
 npm run build
 ```
 
-Os arquivos são gerados em `dist/sccon-test`.
+Os arquivos são gerados em `dist/consulta-cep`.
 
 ## Deploy
 
-O conteúdo da pasta `dist/sccon-test` pode ser publicado em serviços de hospedagem estática, como GitHub Pages, Netlify, Vercel, Firebase Hosting ou em um servidor web próprio.
+O conteúdo da pasta `dist/consulta-cep` pode ser publicado em serviços de hospedagem estática, como GitHub Pages, Netlify, Vercel, Firebase Hosting ou em um servidor web próprio.
 
 Por ser uma SPA Angular, o servidor deve redirecionar rotas desconhecidas para `index.html`, preservando o funcionamento da navegação por URL.
 
@@ -68,7 +68,7 @@ Por ser uma SPA Angular, o servidor deve redirecionar rotas desconhecidas para `
 - Persistência do histórico no `localStorage`.
 - Exclusão de itens do histórico.
 - Layout responsivo para desktop e dispositivos móveis.
-- Uso do logo vetorial da SCCON no header.
+- Logo vetorial próprio no header.
 
 ## Estrutura principal
 

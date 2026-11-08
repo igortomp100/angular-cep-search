@@ -1,3 +1,15 @@
+@if (!pwa.online()) {
+  <div class="pwa-banner pwa-banner--offline" role="status">
+    Você está offline. CEPs já consultados continuam disponíveis.
+  </div>
+}
+@if (pwa.updateAvailable()) {
+  <div class="pwa-banner pwa-banner--update" role="status">
+    Nova versão disponível.
+    <button type="button" (click)="pwa.reload()">Atualizar</button>
+  </div>
+}
+
 <app-header></app-header>
 
 <main class="application-content" id="conteudo-principal">
