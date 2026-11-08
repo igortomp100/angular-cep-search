@@ -1,12 +1,42 @@
-# Angular CEP Search
+<h1 align="center">Angular CEP Search</h1>
+
+<p align="center">
+  Busca de CEPs brasileiros em Angular, <b>instalável como app e com funcionamento offline (PWA)</b>.
+</p>
+
+<p align="center">
+  <a href="https://angular-cep-search.vercel.app/"><img src="docs/badges/demo.svg" alt="Demo online" /></a>
+  <img src="docs/badges/angular.svg" alt="Angular 22" />
+  <img src="docs/badges/typescript.svg" alt="TypeScript" />
+  <img src="docs/badges/pwa.svg" alt="PWA instalável e offline" />
+  <a href="LICENSE"><img src="docs/badges/licenca.svg" alt="Licença MIT" /></a>
+</p>
+
+<p align="center">
+  <a href="https://angular-cep-search.vercel.app/"><b>Acessar a aplicação →</b></a>
+</p>
+
+<p align="center">
+  <img src="docs/destaque.png" alt="Buscar CEP no navegador e no celular" />
+</p>
+
+## Sobre
 
 SPA desenvolvida em Angular para busca de CEPs brasileiros e manutenção de um histórico de consultas, utilizando a API pública ViaCEP.
 
 A aplicação também é um **PWA (Progressive Web App)**: pode ser instalada no celular ou no computador, funciona offline e avisa quando há uma nova versão disponível.
 
-**Acesse a aplicação:** [angular-cep-search.vercel.app](https://angular-cep-search.vercel.app/)
-
 Repositório: [igortomp100/angular-cep-search](https://github.com/igortomp100/angular-cep-search)
+
+## Demonstração
+
+<p align="center">
+  <img src="docs/demo.gif" alt="Demonstração: busca de CEP, perda de conexão e nova busca funcionando offline" width="320" />
+</p>
+
+<p align="center">
+  Busca de um CEP, perda de conexão e uma nova busca respondida pelo cache offline.
+</p>
 
 ## Telas
 
@@ -166,7 +196,7 @@ Acesse `http://localhost:8080` e use o DevTools (**Application → Service worke
 ## Estrutura principal
 
 ```text
-docs/screenshots     # imagens usadas neste README
+docs                 # imagens e GIF usados neste README
 src/app
 ├── core
 │   ├── models
@@ -191,3 +221,7 @@ src/app
 - As fontes (Inter e Material Icons) são hospedadas no próprio projeto via Fontsource, para que textos e ícones funcionem offline sem depender do Google Fonts.
 - O serviço `Pwa` concentra o estado do service worker com signals (online/offline, atualização disponível e modo de instalação).
 - O aviso automático de instalação do navegador é mantido; o ícone do menu é uma opção adicional.
+
+## Licença
+
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE).
