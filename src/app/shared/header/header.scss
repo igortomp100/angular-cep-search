@@ -82,4 +82,89 @@ $breakpoint-mobile: 700px;
             width: auto;
         }
     }
+
+    &__install {
+        position: relative;
+    }
+
+    &__install-button {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        color: tokens.$color-menu-text;
+        display: flex;
+        opacity: 0.85;
+        padding: 0.45rem 0.6rem;
+
+        &:hover,
+        &[aria-expanded='true'] {
+            opacity: 1;
+        }
+
+        .material-icons {
+            font-size: 1.35rem;
+        }
+
+        // Pulso sutil: um anel que se expande e some, 2 vezes a cada acesso.
+        &--pulse {
+            animation: install-pulse 1.4s ease-out 1s 2;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            &--pulse {
+                animation: none;
+            }
+        }
+    }
+
+    &__install-popover {
+        background: #ffffff;
+        border-radius: 0.75rem;
+        box-shadow: 0 12px 32px rgb(4 30 70 / 22%);
+        color: tokens.$color-text;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        max-width: calc(100vw - 2rem);
+        padding: 0.9rem 1rem;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0.6rem);
+        width: 17rem;
+        z-index: 10;
+
+        strong {
+            display: block;
+            font-size: 0.95rem;
+            margin-bottom: 0.35rem;
+        }
+
+        p,
+        ol {
+            margin: 0.35rem 0 0;
+        }
+
+        ol {
+            padding-left: 1.1rem;
+        }
+
+        .material-icons {
+            font-size: 1.05rem;
+            vertical-align: -0.2rem;
+        }
+    }
+
+    &__install-hint {
+        color: #5b6b82;
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes install-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgb(55 210 255 / 55%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0.6rem rgb(55 210 255 / 0%);
+    }
 }

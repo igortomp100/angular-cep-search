@@ -10,6 +10,13 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
   <meta name="theme-color" content="#132745" />
+  <script>
+    // Guarda o evento de instalação caso ele chegue antes do Angular iniciar.
+    // Sem preventDefault: o aviso automático do navegador continua aparecendo.
+    window.addEventListener('beforeinstallprompt', function (e) {
+      window.__installPrompt = e;
+    });
+  </script>
 </head>
 
 <body>
