@@ -8,6 +8,42 @@
             <div class="site-header__menu">
                 <a routerLink="/" routerLinkActive="site-header__menu-link--active" [routerLinkActiveOptions]="{ exact: true }" class="button-base-menu">Início</a>
                 <a routerLink="/enderecos" routerLinkActive="site-header__menu-link--active" class="button-base-menu">Consultar CEP</a>
+
+                @if (pwa.mostrarIcone()) {
+                    <div class="site-header__install">
+                        <button
+                            type="button"
+                            class="button-base-menu site-header__install-button site-header__install-button--pulse"
+                            aria-label="Instalar app"
+                            title="Instalar app"
+                            [attr.aria-expanded]="pwa.modoInstalacao() === 'prompt' ? null : baloAberto()"
+                            (click)="aoClicarInstalar()">
+                            <span class="material-icons" aria-hidden="true">{{ pwa.mobile ? 'install_mobile' : 'install_desktop' }}</span>
+                        </button>
+
+                        @if (baloAberto()) {
+                            <div class="site-header__install-popover" role="dialog" aria-label="Como instalar o app">
+                                <strong>Instale o Buscar CEP</strong>
+                                @switch (pwa.modoInstalacao()) {
+                                    @case ('ios') {
+                                        <ol>
+                                            <li>Toque em <span class="material-icons" aria-hidden="true">ios_share</span> <b>Compartilhar</b></li>
+                                            <li>Escolha <b>Adicionar à Tela de Início</b></li>
+                                        </ol>
+                                    }
+                                    @case ('mac-safari') {
+                                        <p>No menu do Safari, vá em <b>Arquivo → Adicionar ao Dock</b>.</p>
+                                    }
+                                    @default {
+                                        <p>Use o menu do navegador e escolha <b>Instalar app</b> (disponível no Chrome e no Edge).</p>
+                                        <p class="site-header__install-hint">Se já instalou, procure “Buscar CEP” entre seus aplicativos.</p>
+                                    }
+                                }
+                                <p class="site-header__install-hint">Funciona offline e abre como um app.</p>
+                            </div>
+                        }
+                    </div>
+                }
             </div>
         </nav>
     </header>
