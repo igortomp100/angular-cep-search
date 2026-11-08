@@ -4,7 +4,25 @@ SPA desenvolvida em Angular para busca de CEPs brasileiros e manutenção de um 
 
 A aplicação também é um **PWA (Progressive Web App)**: pode ser instalada no celular ou no computador, funciona offline e avisa quando há uma nova versão disponível.
 
+**Acesse a aplicação:** [angular-cep-search.vercel.app](https://angular-cep-search.vercel.app/)
+
 Repositório: [igortomp100/angular-cep-search](https://github.com/igortomp100/angular-cep-search)
+
+## Telas
+
+### Desktop
+
+![Página inicial no desktop](docs/screenshots/home-desktop.png)
+
+![Consulta de CEP com resultado e histórico de buscas no desktop](docs/screenshots/consulta-desktop.png)
+
+### Mobile
+
+<p align="center">
+  <img src="docs/screenshots/home-mobile.png" alt="Página inicial no celular" width="260" />
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/consulta-mobile.png" alt="Consulta de CEP no celular" width="260" />
+</p>
 
 ## Tecnologias
 
@@ -83,6 +101,31 @@ O service worker exige HTTPS em produção (em `localhost` funciona sem HTTPS).
 
 A aplicação pode ser instalada e usada como um app, com ícone próprio, janela sem barra do navegador e funcionamento offline.
 
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/pwa-instalar-iphone.png" alt="Balão com o passo a passo de instalação no iPhone" width="240" /></td>
+    <td align="center"><img src="docs/screenshots/pwa-offline-mobile.png" alt="Aviso de que o app está offline" width="240" /></td>
+    <td align="center"><img src="docs/screenshots/pwa-atualizacao-mobile.png" alt="Aviso de nova versão disponível" width="240" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Instalar app</b><br />Ícone no menu com o passo a passo (iPhone)</td>
+    <td align="center"><b>Offline</b><br />O app segue funcionando sem internet</td>
+    <td align="center"><b>Atualização</b><br />Aviso quando há uma nova versão</td>
+  </tr>
+</table>
+
+### Ícones do app
+
+<p>
+  <img src="public/icons/icon-512.png" alt="Ícone padrão" width="96" />
+  &nbsp;
+  <img src="public/icons/icon-maskable-512.png" alt="Ícone maskable para Android" width="96" />
+  &nbsp;
+  <img src="public/icons/apple-touch-icon.png" alt="Ícone para iOS" width="96" />
+</p>
+
+Ícone padrão, versão *maskable* (recortada pelo Android no formato de cada aparelho) e versão para iOS.
+
 ### Como instalar
 
 - **Android e computador (Chrome/Edge):** pelo aviso automático do navegador, pelo ícone de instalar na barra de endereço ou pelo ícone **Instalar app** no menu da aplicação.
@@ -123,6 +166,7 @@ Acesse `http://localhost:8080` e use o DevTools (**Application → Service worke
 ## Estrutura principal
 
 ```text
+docs/screenshots     # imagens usadas neste README
 src/app
 ├── core
 │   ├── models
