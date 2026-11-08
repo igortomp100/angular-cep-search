@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  <a href="https://angular-cep-search.vercel.app/"><img src="https://img.shields.io/badge/demo-online-0866e9?style=flat-square&logo=vercel&logoColor=white" alt="Demo online" /></a>
-  <img src="https://img.shields.io/badge/Angular-22-dd0031?style=flat-square&logo=angular&logoColor=white" alt="Angular 22" />
-  <img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/PWA-instalável_e_offline-5a0fc8?style=flat-square&logo=pwa&logoColor=white" alt="PWA instalável e offline" />
-  <a href="LICENSE"><img src="https://img.shields.io/badge/licença-MIT-37d2ff?style=flat-square" alt="Licença MIT" /></a>
+  <a href="https://angular-cep-search.vercel.app/"><img src="docs/badges/demo.svg" alt="Demo online" /></a>
+  <img src="docs/badges/angular.svg" alt="Angular 22" />
+  <img src="docs/badges/typescript.svg" alt="TypeScript" />
+  <img src="docs/badges/pwa.svg" alt="PWA instalável e offline" />
+  <a href="LICENSE"><img src="docs/badges/licenca.svg" alt="Licença MIT" /></a>
 </p>
 
 <p align="center">
